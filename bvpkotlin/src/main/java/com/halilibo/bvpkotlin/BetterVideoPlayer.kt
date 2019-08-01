@@ -367,6 +367,10 @@ class BetterVideoPlayer @JvmOverloads constructor(
             mRestartDrawable = ContextCompat.getDrawable(context, R.drawable.bvp_action_restart)
     }
 
+    fun getSource(): Uri? {
+        return mSource
+    }
+
     override fun setSource(source: Uri) {
         mSource = source
         if (mPlayer != null) prepare()
